@@ -19,6 +19,7 @@
 
     <modules>
         <module>image-server</module>
+        <module>api-rate-limiting</module>
     </modules>
 
     <properties>
