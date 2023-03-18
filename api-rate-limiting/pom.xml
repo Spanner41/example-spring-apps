@@ -8,17 +8,30 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>image-server</artifactId>
+    <artifactId>api-rate-limiting</artifactId>
     <packaging>jar</packaging>
 
-    <name>image-server</name>
-    <description>image-server</description>
+    <name>api-rate-limiting</name>
+    <description>api-rate-limiting</description>
 
     <dependencies>
         <dependency>
-            <groupId>design.cardia</groupId>
-            <artifactId>kt-xml</artifactId>
-            <version>0.0.1</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.giffing.bucket4j.spring.boot.starter</groupId>
+            <artifactId>bucket4j-spring-boot-starter</artifactId>
+            <version>0.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <classifier>jakarta</classifier>
         </dependency>
     </dependencies>
 
@@ -28,7 +41,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>design.cardia.exampleimageserver.ImageServerApplicationKt</mainClass>
+                    <mainClass>design.cardia.apiratelimitdemo.ApiRateLimitDemoApplicationKt</mainClass>
                 </configuration>
             </plugin>
             <plugin>
@@ -37,4 +50,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
